@@ -5,9 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VIEWS</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontAwesome/css/all.css">
 </head>
 <body>
-     <div class="services-container">
+
+    <nav id="navbar">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo">VIEWS</label>
+            <ul>
+                <li>
+                    <a href="index.html" onclick="uncheckCheckbox()">HOME</a>
+                </li>
+                <li>
+                    <a href="services.html" onclick="uncheckCheckbox()">SERVICES</a>
+                </li>
+                <li>
+                    <a href="contact.html" onclick="uncheckCheckbox()">CONTACT</a>
+                </li>
+            </ul>
+        </nav>
+
+    <div class="services-container">
         <header class="services-header">
             <h1>Our Travel Packages</h1>
             <p>Explore the perfect journey for your style and budget. From essential adventures to bespoke luxury, we have a package for every traveler.</p>
@@ -109,8 +130,45 @@
                 <img src="img/south_africa.png" alt="High-end SA ">
             </div>
         </section>
+    </div>
 
+    <div class="footer">
+        <div class="footer-socials">
+            <p>Follow Us</p>
+            <p>And Keep up to date with Views</p>
+            <div class="socials"> <a><i class="fa-brands fa-instagram fa-xl"></i></a>
+                <a><i class="fa-brands fa-facebook fa-xl"></i></a>
+                <a><i class="fa-brands fa-linkedin fa-xl"></i></a>
+            </div>
+        </div>
+    
+        <div class="contact-info"> <div class="contact-info-box">
+                <i class="fa-solid fa-phone fa-lg"></i>
+                <p>013 535 2071</p>
+            </div>
+            <div class="contact-info-box">
+                <i class="fa-solid fa-location-dot fa-lg"></i>
+                <p>Mbombela</p>
+            </div>
+            <div class="contact-info-box">
+                <i class="fa-solid fa-envelope fa-lg"></i>
+                <p>views@info.co.za</p>
+            </div>
+        </div>
     </div>
     
+    <script>
+        function uncheckCheckbox() {
+            document.getElementById('check').checked = false;
+        }
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+</script>
 </body>
 </html>
